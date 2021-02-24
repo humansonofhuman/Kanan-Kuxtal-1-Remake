@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 2041317630108095191}
   - component: {fileID: 2041317630108095177}
   - component: {fileID: 3895512801070282891}
+  - component: {fileID: 2607049847805308250}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -208,3 +209,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aim: {fileID: 2119341080}
   aimTransform: {fileID: 213261018325182380}
+--- !u!114 &2607049847805308250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041317630108095188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f82d2b2fd04cb404997c3c5259d320de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 9117006074064831831, guid: f38fd96c7612bd84e86ab88f2c7697c1, type: 3}
+  fireRate: 1
+  aim: {fileID: 2119341080}
