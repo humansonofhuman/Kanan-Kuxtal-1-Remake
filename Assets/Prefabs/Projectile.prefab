@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9117006074064831831}
   - component: {fileID: 1211079022611198601}
+  - component: {fileID: 5744790779312259982}
   - component: {fileID: 1835363281344175877}
+  - component: {fileID: 5922797527146932898}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -83,6 +85,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &5744790779312259982
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272348826563718716}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
 --- !u!114 &1835363281344175877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,3 +115,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   lifeSpan: 5
+--- !u!114 &5922797527146932898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272348826563718716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd6353b065ff7048a51cfe6ecf54b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsToHurt:
+  - Enemy
+  enterDamage: 1
+  dieAfterEnterDamage: 1
