@@ -5,8 +5,8 @@ public class Damageable : MonoBehaviour
 {
     public event UnityAction OnDie;
     public bool IsDead;
-    float maxDurability;
-    float durability;
+    [SerializeField] float maxDurability;
+    [SerializeField] float durability;
     public void TakeDamage(float amount)
     {
         durability -= amount;
