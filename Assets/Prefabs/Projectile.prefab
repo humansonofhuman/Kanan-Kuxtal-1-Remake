@@ -127,6 +127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd6353b065ff7048a51cfe6ecf54b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tagsToDamage:
+  - Enemy
+  damage: 1
+  cooldownTime: 0
+  isOnCooldown: 0
   tagsToHurt:
   - Enemy
   enterDamage: 1
