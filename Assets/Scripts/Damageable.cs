@@ -9,7 +9,9 @@ public class Damageable : MonoBehaviour
     [SerializeField] float durability;
     public void TakeDamage(float amount)
     {
-        durability -= amount;
+        if (IsDead) return;
+
+        durability = Mathf.Clamp(durability - amount, 0, maxDurability); ;
         if (durability <= 0)
         {
             IsDead = true;
@@ -19,9 +21,7 @@ public class Damageable : MonoBehaviour
 
     public void RecoverDurability(float amount)
     {
-        durability += amount;
-        if(durability > maxDurability)
-            durability = maxDurability;
+        durability = Mathf.Clamp(durability + amount, 0, maxDurability);
     }
 
 }
