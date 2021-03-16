@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1211079022611198601}
   - component: {fileID: 5744790779312259982}
   - component: {fileID: 1835363281344175877}
+  - component: {fileID: -2796720428071628737}
   - component: {fileID: 5922797527146932898}
   m_Layer: 0
   m_Name: Projectile
@@ -115,6 +116,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   lifeSpan: 5
+--- !u!114 &-2796720428071628737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7272348826563718716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01fcecb0bde78fa4990e39a2c03ae4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsToDamage:
+  - Enemy
+  damage: 1
+  cooldownTime: 0
+  isOnCooldown: 0
 --- !u!114 &5922797527146932898
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,12 +145,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd6353b065ff7048a51cfe6ecf54b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagsToDamage:
-  - Enemy
-  damage: 1
-  cooldownTime: 0
-  isOnCooldown: 0
-  tagsToHurt:
-  - Enemy
-  enterDamage: 1
-  dieAfterEnterDamage: 1
+  doDamage: {fileID: -2796720428071628737}

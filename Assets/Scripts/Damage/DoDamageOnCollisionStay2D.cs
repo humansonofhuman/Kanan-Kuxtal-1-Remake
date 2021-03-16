@@ -1,10 +1,13 @@
 using UnityEngine;
 
-public class DoDamageOnCollisionStay2D : DoDamageBase
+[RequireComponent(typeof(DoDamageBase))]
+public class DoDamageOnCollisionStay2D : MonoBehaviour
 {
+    [SerializeField] DoDamageBase doDamage;
+
     private void OnCollisionStay2D(Collision2D other)
     {
-        TryToDamage(other.gameObject);
+        doDamage.TryToDamage(other.gameObject);
     }
 
 }

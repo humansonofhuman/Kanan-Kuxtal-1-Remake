@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3112237481609061663}
   - component: {fileID: 6948441876131987156}
   - component: {fileID: 8968687617318966471}
+  - component: {fileID: 8279281923115742007}
   - component: {fileID: 5297714079794533424}
   m_Layer: 0
   m_Name: Enemy
@@ -153,6 +154,23 @@ MonoBehaviour:
   IsDead: 0
   maxDurability: 1
   durability: 1
+--- !u!114 &8279281923115742007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8811246977011601125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01fcecb0bde78fa4990e39a2c03ae4a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagsToDamage:
+  - Tree
+  damage: 1
+  cooldownTime: 0.5
+  isOnCooldown: 0
 --- !u!114 &5297714079794533424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,8 +183,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bb83ccb08896374296daee288c0b20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagsToDamage:
-  - Tree
-  damage: 1
-  cooldownTime: 0.5
-  isOnCooldown: 0
+  doDamage: {fileID: 8279281923115742007}
