@@ -1,11 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class DoDamageBase : MonoBehaviour
 {
-    public event UnityAction OnDoingDamage;
+    public event Action OnDoingDamage;
     [SerializeField] List<string> tagsToDamage;
     [SerializeField] float damage;
     [Tooltip("Time in seconds. On 0 just does damage one time.")]

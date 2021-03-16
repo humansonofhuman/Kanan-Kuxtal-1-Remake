@@ -1,9 +1,9 @@
+using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Damageable : MonoBehaviour
 {
-    public event UnityAction OnDie;
+    public event Action OnDie;
     public bool IsDead;
     [SerializeField] float maxDurability;
     [SerializeField] float durability;
