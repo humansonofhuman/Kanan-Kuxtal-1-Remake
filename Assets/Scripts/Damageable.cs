@@ -7,11 +7,16 @@ public class Damageable : MonoBehaviour
     public bool IsDead;
     [SerializeField] float maxDurability;
     [SerializeField] float durability;
+
     public void TakeDamage(float amount)
     {
         if (IsDead) return;
 
-        durability = Mathf.Clamp(durability - amount, 0, maxDurability); ;
+        if (amount < 0)
+            durability = 0;
+        else
+            durability = Mathf.Clamp(durability - amount, 0, maxDurability);
+
         if (durability <= 0)
         {
             IsDead = true;
