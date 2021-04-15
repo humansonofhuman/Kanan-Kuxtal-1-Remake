@@ -7255,7 +7255,7 @@ GameObject:
   - component: {fileID: 1054584804}
   - component: {fileID: 1054584803}
   - component: {fileID: 1054584805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TopBottomWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8413,7 +8413,7 @@ GameObject:
   - component: {fileID: 1372674241}
   - component: {fileID: 1372674240}
   - component: {fileID: 1372674242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LateralWalls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
