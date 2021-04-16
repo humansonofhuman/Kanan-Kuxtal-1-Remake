@@ -7,6 +7,7 @@ public class Damageable : MonoBehaviour
     public bool IsDead;
     [SerializeField] float maxDurability;
     [SerializeField] float durability;
+    [SerializeField] bool destroyGameObjectOnDeath;
 
     public void TakeDamage(float amount)
     {
@@ -21,6 +22,10 @@ public class Damageable : MonoBehaviour
         {
             IsDead = true;
             OnDie?.Invoke();
+            if (destroyGameObjectOnDeath)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 

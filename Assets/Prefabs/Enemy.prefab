@@ -154,6 +154,7 @@ MonoBehaviour:
   IsDead: 0
   maxDurability: 1
   durability: 1
+  destroyGameObjectOnDeath: 1
 --- !u!114 &8279281923115742007
 MonoBehaviour:
   m_ObjectHideFlags: 0
