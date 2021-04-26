@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 9117006074064831831, guid: f38fd96c7612bd84e86ab88f2c7697c1, type: 3}
-  fireRate: 1
+  fireRate: 4
   aim: {fileID: 2119341080}
 --- !u!70 &1187529199
 CapsuleCollider2D:
