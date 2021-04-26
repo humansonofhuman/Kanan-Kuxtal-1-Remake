@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: -2796720428071628737}
   - component: {fileID: 5922797527146932898}
   - component: {fileID: 2600546055749383685}
-  - component: {fileID: 3777492463085679633}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -134,6 +133,7 @@ MonoBehaviour:
   IsDead: 0
   maxDurability: 1
   durability: 1
+  destroyGameObjectOnDeath: 1
 --- !u!114 &-2796720428071628737
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,16 +179,3 @@ MonoBehaviour:
   doDamage: {fileID: -2796720428071628737}
   selfDamageable: {fileID: 8002328619289406456}
   damage: -1
---- !u!114 &3777492463085679633
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7272348826563718716}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ee94f58e6c3ab643a5001ef94f86982, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  theOneWhoDies: {fileID: 8002328619289406456}
