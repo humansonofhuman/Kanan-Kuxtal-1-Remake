@@ -33,25 +33,37 @@ public class EnemySpawnerController : MonoBehaviour
     public float timeBetweenWaves;
     int currentWave = 1;
     int lastWave = 15;
+    int enemiesAlive = 0;
+    [SerializeField] VoidEventChannelSO EnemyDiedEvent;
 
     private void Start()
     {
-        StartCoroutine(StartWaveRoutine());
+        StartWave();
     }
 
-    IEnumerator StartWaveRoutine()
+    private void OnEnable()
     {
-        while(currentWave <= lastWave)
+        EnemyDiedEvent.OnEventRaised += RemoveOneEnemyAlive;
+    }
+
+    private void OnDisable()
+    {
+        EnemyDiedEvent.OnEventRaised -= RemoveOneEnemyAlive;
+    }
+
+    private void RemoveOneEnemyAlive()
+    {
+        enemiesAlive--;
+        if (enemiesAlive < 1)
         {
-            Debug.Log($"Starting wave {currentWave}");
-            StartWave();
-            yield return new WaitForSeconds(timeBetweenWaves);
             currentWave++;
+            StartWave();
         }
     }
 
     public void StartWave()
     {
+        Debug.Log($"Starting wave {currentWave}");
         WaveDirections waveDirections = GetWaveDirections();
         int amountOfDirections = SparseBitcount((int)waveDirections);
         int enemiesPerSpawner = currentWave;
@@ -89,6 +101,7 @@ public class EnemySpawnerController : MonoBehaviour
 
     IEnumerator SpawnEnemies(List<GameObject> enemySpawners, int amount)
     {
+        enemiesAlive += amount * enemySpawners.Count;
         for (int i = 0; i < amount; i++)
         {
             enemySpawners.ForEach(es => SpawnEnemies(es));

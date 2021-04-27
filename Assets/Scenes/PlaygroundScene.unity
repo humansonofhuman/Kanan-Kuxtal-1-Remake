@@ -8558,6 +8558,7 @@ MonoBehaviour:
   - {fileID: 8811246977011601125, guid: fdbf76fba69871e4d99d1a6d99fc200c, type: 3}
   tree: {fileID: 948916185}
   timeBetweenWaves: 10
+  EnemyDiedEvent: {fileID: 11400000, guid: 997c5298d9df9fb439b96f14c057e617, type: 2}
 --- !u!1 &1088407389
 GameObject:
   m_ObjectHideFlags: 3

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8968687617318966471}
   - component: {fileID: 8279281923115742007}
   - component: {fileID: 5297714079794533424}
+  - component: {fileID: -4806535813501374830}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -185,3 +186,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doDamage: {fileID: 8279281923115742007}
+--- !u!114 &-4806535813501374830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8811246977011601125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0b12131165bf4f45a021f576ec0258b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theOneWhoDies: {fileID: 8968687617318966471}
+  events:
+  - {fileID: 11400000, guid: 997c5298d9df9fb439b96f14c057e617, type: 2}
